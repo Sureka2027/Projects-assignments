@@ -12,10 +12,12 @@ import pageClass.Flight;
 public class BaseClass {
 	public WebDriver driver;
 	public Flight search;
-	
+	public ExcelLibrary xlib;
+
 	@BeforeClass
 	public void openBrowser() {
 	    search=new Flight();
+	    xlib=new ExcelLibrary();
 		System.setProperty("webdriver.chrome.driver", "D:\\selenium_drivers\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
